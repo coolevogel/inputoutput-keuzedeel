@@ -13,16 +13,18 @@ void setup() {
 void loop() {
 
   int detected = digitalRead(DETECT);// read Laser sensor
+  Serial.println(detected);
+
  
   if( detected == HIGH)
   {
     digitalWrite(ACTION,HIGH);// set the buzzer ON
-    Serial.println("Detected!");
+    // Serial.println("Detected!");
 
   }else{
     digitalWrite(ACTION,LOW); // Set the buzzer OFF
-    Serial.println("No laser");
+    // Serial.println("No laser");
 
   }
-  delay(200);
+  
 }
